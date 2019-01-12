@@ -85,7 +85,7 @@ const Layout = ({ children }) => (
           {children}
           <Footer>
             &copy; 2019 by Sean Feeney. All rights reserved. <br />
-            <a href="https://github.com/sfeeney22/gatsby-starter-minimal-blog">GitHub Repository</a> <br />
+            <a href="https://github.com/seanfeeney/blog">GitHub Repository</a> <br />
             <span>Last build: {data.site.buildTime}</span>
           </Footer>
         </React.Fragment>
