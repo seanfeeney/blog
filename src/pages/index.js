@@ -47,7 +47,7 @@ const IndexPage = ({
       <Hero>
         <h1>Hi.</h1>
         <p>
-          I&apos;m Sean Feeney, and this is mostly just for fun.
+          Occassionally I write things down, or take pictures of things.
         </p>
         <Link to="/contact">
           <Button big>

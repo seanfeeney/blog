@@ -1,0 +1,3 @@
+User-agent: *
+
+sitemap: https://theseanfeeney.com/sitemap.xml
