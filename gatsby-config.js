@@ -10,11 +10,34 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-styled-components',
+    `gatsby-remark-copy-linked-files`,
+    `gatsby-transformer-sharp`,
+    'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-images',
+            options: {
+              maxWidth: 970,
+            },
+          },
+        ],
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'post',
         path: `${__dirname}/blog`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/images`,
+        name: 'images',
       },
     },
     {
