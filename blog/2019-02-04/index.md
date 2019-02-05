@@ -11,7 +11,7 @@ My home network includes a Synology DS918+ NAS for media storage, streaming, and
 Turns out it wasn't hard. I simply copied the node exporter code to the NAS device. Using scp:
 `scp node_exporter sean@<NAS IP>:/volume1/homes/sean`
 
-Few things to note there. The username will be different for your NAS device, generally whatever you setup when you setup the nas. The location "volume1" is also just the generic volume name given when I set the NAS up. The "homes" section is based on the ssh settings on the NAS. If you ssh to your NAS device and go up a directory you'll notice you find yourself in /var/services/homes - it's essentiall where the home directory is created for your user when you connect. 
+Few things to note there. The username will be different for your NAS device, generally whatever you setup when you setup the nas. The location "volume1" is also just the generic volume name given when I set the NAS up. The "homes" section is based on the ssh settings on the NAS. If you ssh to your NAS device and go up a directory you'll notice you find yourself in /var/services/homes - it's essentially where the home directory is created for your user when you connect. 
 
 You can control SSH settings on the Synology NAS portal. Assuming you have that all in place, the easy part is adding the config so node exporter auto starts on reboot. To do that first escalate your priveleges in the NAS ssh session to root. To do that run `sudo -i`. Once you are escalated, you will need to create the init file: `vim /etc/init/node_exporter.conf`. In that file:
 ```
