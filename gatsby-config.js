@@ -1,84 +1,68 @@
-const config = require('./config/SiteConfig');
-
-const pathPrefix = config.pathPrefix === '/' ? '' : config.pathPrefix;
+const userConfig = require('./config');
 
 module.exports = {
-  pathPrefix: config.pathPrefix,
   siteMetadata: {
-    siteUrl: config.siteUrl + pathPrefix,
+    title: userConfig.title,
+    author: userConfig.author,
+    description: userConfig.description,
+    siteUrl: userConfig.siteUrl,
   },
+  pathPrefix: userConfig.pathPrefix,
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-styled-components',
-    `gatsby-remark-copy-linked-files`,
-    `gatsby-transformer-sharp`,
-    'gatsby-plugin-sharp',
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/src/pages`,
+        name: 'pages',
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        excerpt_separator: `<!-- end -->`,
         plugins: [
           {
-            resolve: 'gatsby-remark-images',
+            resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 970,
+              maxWidth: 700,
+              linkImagesToOriginal: false,
+              wrapperStyle: 'margin: 15px -30px !important',
             },
           },
-        ],
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'post',
-        path: `${__dirname}/blog`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        path: `${__dirname}/images`,
-        name: 'images',
-      },
-    },
-    {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
           {
-            resolve: 'gatsby-remark-external-links',
+            resolve: `gatsby-remark-responsive-iframe`,
             options: {
-              target: '_blank',
-              rel: 'nofollow noopener noreferrer',
+              wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
           'gatsby-remark-prismjs',
-          'gatsby-remark-autolink-headers',
+          'gatsby-remark-copy-linked-files',
+          'gatsby-remark-smartypants',
         ],
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
-      resolve: 'gatsby-plugin-typography',
+      resolve: `gatsby-plugin-google-analytics`,
       options: {
-        pathToConfigModule: 'src/utils/typography.js',
+        //trackingId: `ADD YOUR TRACKING ID HERE`,
       },
     },
-    'gatsby-plugin-catch-links',
-    'gatsby-plugin-sitemap',
-    'gatsby-plugin-lodash',
+    `gatsby-plugin-feed`,
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        name: config.siteTitle,
-        short_name: config.siteTitleAlt,
-        description: config.siteDescription,
-        start_url: config.pathPrefix,
-        background_color: config.backgroundColor,
-        theme_color: config.themeColor,
-        display: 'standalone',
-        icon: config.favicon,
+        name: userConfig.title,
+        short_name: userConfig.title,
+        start_url: userConfig.siteUrl,
+        background_color: '#fff',
+        theme_color: userConfig.primaryColor,
+        display: 'minimal-ui',
+        icon: 'src/main.jpg',
       },
     },
-    'gatsby-plugin-offline',
-    'gatsby-plugin-netlify',
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-react-helmet`,
   ],
 };
