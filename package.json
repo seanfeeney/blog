@@ -60,8 +60,5 @@
     "develop": "gatsby develop",
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public"
-  },
-  "resolutions": {
-    "ajv": "6.8.1"
   }
 }
