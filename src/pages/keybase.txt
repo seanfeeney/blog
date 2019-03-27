@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/sfeeney
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://theseanfeeney.com
+  * I am sfeeney (https://keybase.io/sfeeney) on keybase.
+  * I have a public key ASDlWaNE_a2DTOvfxweB77b5JX3Fk1HdTjpOK3EDemNkwgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101abd3b2c4837c7fb3d436915a09ff70ca96f0301386d28ce8baf8639b647c18a60a",
+      "host": "keybase.io",
+      "kid": "0120e559a344fdad834cebdfc70781efb6f9257dc59351dd4e3a4e2b71037a6364c20a",
+      "uid": "e9693b906c920ca1211599e03560cd19",
+      "username": "sfeeney"
+    },
+    "merkle_root": {
+      "ctime": 1553726264,
+      "hash": "eeae2d0ecfacd48a325cef194733b9ca130a32658c42701333a0d0538ef6007028974ef58dcabcc75c0a6828a2a51217e3eb675f416521a930ff7699a2ece06c",
+      "hash_meta": "24d267f1e31a042fffeb3e0f3a5a69a9d0951ca6e04f3451c7f085f6b57da95c",
+      "seqno": 5039935
+    },
+    "service": {
+      "entropy": "p/NR7JBGAMaAlG3BPPYbzHKJ",
+      "hostname": "theseanfeeney.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "3.1.2"
+  },
+  "ctime": 1553726281,
+  "expire_in": 504576000,
+  "prev": "f6a14b77436195380607001a26cb8a9c5131bc32085c92f02897fa17843dc2af",
+  "seqno": 27,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg5VmjRP2tg0zr38cHge+2+SV9xZNR3U46TitxA3pjZMIKp3BheWxvYWTESpcCG8Qg9qFLd0NhlTgGBwAaJsuKnFExvDIIXJLwKJf6F4Q9wq/EIE2zScgY9v1AJxjnKkaJT4ohCzal573WwS5k6zbXR+ieAgHCo3NpZ8RAFQXt2d2dW7w3PMeFJUj+tMGtUvwC/ZKgmaFeQfk0NqeSRDX5dJokiUGXZ35DjGD3BUlQznDgZIs6/2adOmG8D6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIOUdSubpjxUJbRt7kwg8Fy0XRjKC2CJZXgo1I1gNDp5Lo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/sfeeney
+
+==================================================================
